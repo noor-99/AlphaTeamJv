@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.utilisateur.UtilisateurBackController">
+   <children>
+      <TableView fx:id="TableViewBackUser" layoutX="23.0" layoutY="425.0" onMouseClicked="#On_Click_TableViewUser" prefHeight="254.0" prefWidth="945.0" styleClass="border" stylesheets="@../../../../Values/style.css">
+        <columns>
+          <TableColumn fx:id="cin_B" prefWidth="75.0" text="Cin" />
+          <TableColumn fx:id="nom_B" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prenom_B" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="email_B" prefWidth="195.0" text="Email" />
+            <TableColumn fx:id="telephone_B" prefWidth="103.0" text="Telephone" />
+            <TableColumn fx:id="role_B" prefWidth="119.0" text="Role" />
+            <TableColumn fx:id="date_naissance_B" prefWidth="183.0" text="Naissance" />
+        </columns>
+      </TableView>
+      <Button fx:id="Ajouter_utilisateur_B" layoutX="191.0" layoutY="385.0" mnemonicParsing="false" onAction="#On_Click_AjouterUtilisateur" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: #03224C;" text="Ajouter" textFill="WHITE" />
+      <Label layoutX="45.0" layoutY="70.0" text="Cin" />
+      <TextField fx:id="cin_Ajout_B" layoutX="133.0" layoutY="66.0" prefHeight="29.0" prefWidth="178.0" promptText="CIN" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="nom_Ajout_B" layoutX="133.0" layoutY="103.0" prefHeight="29.0" prefWidth="178.0" promptText="Nom" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="prenom_Ajout_B" layoutX="133.0" layoutY="143.0" prefHeight="29.0" prefWidth="178.0" promptText="Prenom" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="telephone_Ajout_B" layoutX="133.0" layoutY="260.0" prefHeight="29.0" prefWidth="178.0" promptText="Numero Telephone" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="email_Ajout_B" layoutX="133.0" layoutY="224.0" prefHeight="29.0" prefWidth="178.0" promptText="Email" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <DatePicker fx:id="date_Ajout_B" layoutX="133.0" layoutY="186.0" promptText="Date naissance" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="role_Ajout_B" layoutX="133.0" layoutY="298.0" prefHeight="29.0" prefWidth="178.0" promptText="Role" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <Label layoutX="45.0" layoutY="107.0" text="Nom" />
+      <Label layoutX="45.0" layoutY="147.0" text="Prenom" />
+      <Label layoutX="45.0" layoutY="192.0" text="Date naissance" />
+      <Label layoutX="45.0" layoutY="228.0" text="Email" />
+      <Label layoutX="45.0" layoutY="259.0" text="Telephone" />
+      <Label layoutX="45.0" layoutY="299.0" text="Role" />
+      <Label layoutX="45.0" layoutY="343.0" text="Mot de passe" />
+      <PasswordField fx:id="mdp_Ajout_B" layoutX="133.0" layoutY="339.0" prefHeight="29.0" prefWidth="178.0" promptText="Mot de passe" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <ImageView fitHeight="57.0" fitWidth="92.0" layoutX="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/bankiz.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ModifierUtilisateur" layoutX="396.0" layoutY="368.0" mnemonicParsing="false" onAction="#On_Click_ModifierU" text="Modifier" />
+   </children>
+</AnchorPane>

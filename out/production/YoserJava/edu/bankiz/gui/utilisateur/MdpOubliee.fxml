@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.utilisateur.MdpOublieeController">
+   <children>
+      <Button fx:id="search" layoutX="143.0" layoutY="273.0" mnemonicParsing="false" onAction="#On_Click_Chercher" prefHeight="29.0" prefWidth="153.0" styleClass="button-Front" stylesheets="@../../../../Values/style.css" text="Envoyer Le Code" />
+      <TextField fx:id="email_search" layoutX="144.0" layoutY="227.0" promptText="Votre Email" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="new_pwd" layoutX="635.0" layoutY="270.0" promptText="nouveau mot de passe" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="confirme_pwd" layoutX="635.0" layoutY="316.0" promptText="cofirmer mot de passe" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <Button fx:id="btn_modifier" layoutX="636.0" layoutY="363.0" mnemonicParsing="false" onAction="#On_Click_ModifierMDP" prefHeight="29.0" prefWidth="153.0" styleClass="button-Front" stylesheets="@../../../../Values/style.css" text="Changer Mot de passe" />
+      <ImageView fitHeight="113.0" fitWidth="213.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/bankiz.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="code" layoutX="635.0" layoutY="221.0" promptText="code de verification" styleClass="border" stylesheets="@../../../../Values/style.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.utilisateur.LoginController">
+   <children>
+      <TextField fx:id="email_login" layoutX="694.0" layoutY="176.0" prefHeight="36.0" prefWidth="184.0" promptText="user@info.com" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <PasswordField fx:id="mdp_login" layoutX="694.0" layoutY="235.0" prefHeight="36.0" prefWidth="184.0" promptText="Votre mot de passe" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <Button fx:id="se_connecter" layoutX="694.0" layoutY="289.0" mnemonicParsing="false" onAction="#On_Click_Se_Connecter" prefHeight="36.0" prefWidth="184.0" style="-fx-background-color: #f6c23e;" stylesheets="@../../../../Values/style.css" text="Se conecter">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="mdp_oubliee" layoutX="694.0" layoutY="341.0" mnemonicParsing="false" onAction="#On_Click_mdpOubliee" prefHeight="36.0" prefWidth="184.0" style="-fx-background-color: #f6c23e;" stylesheets="@../../../../Values/style.css" text="Mot de Passe Oubliée!!" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <VBox alignment="TOP_CENTER" prefHeight="680.0" prefWidth="511.0" style="-fx-background-color: #B0C4DE;" styleClass="left-side_background" stylesheets="@../../../../Values/style.css">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/bankiz.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="76.0" prefWidth="511.0" />
+            <ImageView fitHeight="65.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" styleClass="left-side_background">
+               <image>
+                  <Image url="@../../../../img/cle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/cle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="116.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/cle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/cle.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <ImageView fitHeight="37.0" fitWidth="65.0" layoutX="625.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="52.0" layoutX="638.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/pwd.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
