@@ -6,15 +6,15 @@
 
 <AnchorPane prefHeight="680.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.utilisateur.ProfileController">
    <children>
-      <TableView fx:id="tabelViewProfile" layoutX="41.0" layoutY="148.0" prefHeight="73.0" prefWidth="569.0" styleClass="border" stylesheets="@../../../../Values/style.css">
+      <TableView fx:id="tabelViewProfile" layoutX="14.0" layoutY="109.0" onMouseClicked="#On_Click_TableViewProfile" prefHeight="73.0" prefWidth="681.0" styleClass="border" stylesheets="@../../../../Values/style.css">
         <columns>
           <TableColumn fx:id="cin_col" maxWidth="750.0" minWidth="30.0" prefWidth="75.0" text="Cin" />
           <TableColumn fx:id="nom_col" maxWidth="750.0" minWidth="30.0" prefWidth="75.0" text="Nom" />
             <TableColumn fx:id="prenom_col" maxWidth="750.0" minWidth="30.0" prefWidth="75.0" text="Prenom" />
-            <TableColumn fx:id="date_naissance_col" maxWidth="750.0" minWidth="30.0" prefWidth="110.0" text="Naissance" />
-            <TableColumn fx:id="email_col" maxWidth="750.0" minWidth="30.0" prefWidth="97.0" text="Email" />
-            <TableColumn fx:id="tel_col" maxWidth="750.0" minWidth="18.0" prefWidth="75.0" text="Telephone" />
-            <TableColumn fx:id="role_col" maxWidth="750.0" minWidth="18.0" prefWidth="71.0" text="Role" />
+            <TableColumn fx:id="date_naissance_col" maxWidth="750.0" minWidth="30.0" prefWidth="122.0" text="Naissance" />
+            <TableColumn fx:id="email_col" maxWidth="750.0" minWidth="30.0" prefWidth="134.0" text="Email" />
+            <TableColumn fx:id="tel_col" maxWidth="750.0" minWidth="18.0" prefWidth="106.0" text="Telephone" />
+            <TableColumn fx:id="role_col" maxWidth="750.0" minWidth="18.0" prefWidth="91.0" text="Role" />
         </columns>
       </TableView>
       <ImageView fitHeight="96.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
@@ -22,5 +22,20 @@
             <Image url="@../../../../img/bankiz.png" />
          </image>
       </ImageView>
+      <TextField fx:id="cin_profile" layoutX="723.0" layoutY="109.0" prefHeight="25.0" prefWidth="174.0" promptText="CIN" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="nom_profile" layoutX="723.0" layoutY="146.0" prefHeight="25.0" prefWidth="174.0" promptText="Nom" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="prenom_profile" layoutX="723.0" layoutY="192.0" prefHeight="25.0" prefWidth="174.0" promptText="Prenom" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="telephone_profile" layoutX="723.0" layoutY="321.0" prefHeight="25.0" prefWidth="174.0" promptText="Telepohne" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <TextField fx:id="email_profile" layoutX="723.0" layoutY="279.0" prefHeight="25.0" prefWidth="174.0" promptText="Email" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <DatePicker fx:id="date_naissance_profile" layoutX="723.0" layoutY="231.0" promptText="Date naissance" styleClass="border" stylesheets="@../../../../Values/style.css" />
+      <Button fx:id="modifier_profile" layoutX="721.0" layoutY="373.0" mnemonicParsing="false" onAction="#On_Click_Modifier_Profile" prefHeight="35.0" prefWidth="178.0" styleClass="button-Front" stylesheets="@../../../../Values/style.css" text="Modifier" />
+      <TableView fx:id="TableViewReclamtionProfile" layoutX="14.0" layoutY="260.0" prefHeight="154.0" prefWidth="398.0" styleClass="border" stylesheets="@../../../../Values/style.css">
+        <columns>
+          <TableColumn fx:id="type_rec_col" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="date_rec_col" prefWidth="103.0" text="Date" />
+            <TableColumn fx:id="etat_rec_col" prefWidth="82.0" text="Etat" />
+            <TableColumn fx:id="desc_rec_col" prefWidth="137.0" text="Description" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

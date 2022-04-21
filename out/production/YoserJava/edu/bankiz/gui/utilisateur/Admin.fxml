@@ -3,8 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.utilisateur.AdminController">
+<AnchorPane prefHeight="680.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.utilisateur.AdminController">
    <children>
-      <Button fx:id="utilisateur" layoutX="23.0" layoutY="30.0" mnemonicParsing="false" onAction="#On_Click_Utilisateur" text="Utilisateur" />
+      <Button fx:id="utilisateur" layoutX="25.0" layoutY="69.0" mnemonicParsing="false" onAction="#On_Click_Utilisateur" prefHeight="40.0" prefWidth="118.0" stylesheets="@../../../../Values/style.css" text="Utilisateur" textFill="WHITE" />
+      <Button fx:id="reclamations" layoutX="25.0" layoutY="129.0" mnemonicParsing="false" onAction="#On_Click_Rec_Back" prefHeight="40.0" prefWidth="118.0" stylesheets="@../../../../Values/style.css" text="Reclamations" textFill="WHITE" />
    </children>
 </AnchorPane>

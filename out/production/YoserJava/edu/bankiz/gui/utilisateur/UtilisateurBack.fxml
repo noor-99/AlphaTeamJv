@@ -39,6 +39,6 @@
             <Image url="@../../../../img/bankiz.png" />
          </image>
       </ImageView>
-      <Button fx:id="ModifierUtilisateur" layoutX="396.0" layoutY="368.0" mnemonicParsing="false" onAction="#On_Click_ModifierU" text="Modifier" />
+      <Button fx:id="ModifierUtilisateur" layoutX="340.0" layoutY="385.0" mnemonicParsing="false" onAction="#On_Click_ModifierU" prefHeight="29.0" prefWidth="111.0" stylesheets="@../../../../Values/style.css" text="Modifier" textFill="WHITE" />
    </children>
 </AnchorPane>

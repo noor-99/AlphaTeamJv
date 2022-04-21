@@ -95,6 +95,27 @@ public class UtilisateurCRUD {
         }
     }
 
+    public void modifierProfile(Utilisateur u,int idModifier){
+        String requete = "UPDATE utilisateur SET `cin_u`=?,`nom_u`=?,`prenom_u`=?,`date_naissance`=?, `email_u`=?,`num_tel`=? WHERE id=" + idModifier;
+        try {
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requete);
+            pst.setInt(1, u.getCin_u());
+            pst.setString(2, u.getNom_u());
+            pst.setString(3, u.getPrenom_u());
+            pst.setDate(4, u.getDate_naissance());
+            pst.setString(5, u.getEmail_u());
+            pst.setInt(6, u.getNum_tel());
+            pst.executeUpdate();
+            int rowsUpdated = pst.executeUpdate();
+            if (rowsUpdated > 0) {
+                System.out.println("La modification de l'utilisateur : " + u.getNom_u() + " a été éffectuée avec succès ");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void UpdatePersonne(Utilisateur u) {
         try {
 
@@ -331,6 +352,33 @@ public class UtilisateurCRUD {
         try {
             pst = MyConnection.getInstance().getCnx().prepareStatement(requete);
             pst.setString(1, Mail);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                u.setId(rs.getInt(1));
+                u.setCin_u(rs.getInt(2));
+                u.setNom_u(rs.getString("nom_u"));
+                u.setPrenom_u(rs.getString("prenom_u"));
+                u.setDate_naissance(rs.getDate("date_naissance"));
+                u.setEmail_u(rs.getString("email_u"));
+                u.setNum_tel(rs.getInt("num_tel"));
+                u.setRole(rs.getString("role"));
+                u.setMot_de_passe(rs.getString("mot_de_passe"));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return u;
+    }
+
+    public Utilisateur findByID(int id){
+        Utilisateur u=new Utilisateur();
+        String requete = "SELECT * FROM `utilisateur` WHERE id = ?";
+
+        PreparedStatement pst = null;
+        try {
+            pst = MyConnection.getInstance().getCnx().prepareStatement(requete);
+            pst.setString(1, String.valueOf(id));
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 u.setId(rs.getInt(1));

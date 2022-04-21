@@ -146,5 +146,4 @@ public class InscriptionController {
         stage.show();
     }
 
-
 }

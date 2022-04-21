@@ -77,8 +77,6 @@ public class UtilisateurBackController {
             role_B.setCellValueFactory(new PropertyValueFactory<>("role"));
             TableViewBackUser.setItems((ObservableList) data);
             addEtatColumn();
-
-
         }
 
     }
@@ -234,8 +232,6 @@ public class UtilisateurBackController {
             UtilisateurCRUD pcd =  new UtilisateurCRUD();
             pcd.modifierUtlisateur(U,idModifier);
             JOptionPane.showMessageDialog(null, "Modification effectué avec success");
-
-
         }
         initialize();
     }

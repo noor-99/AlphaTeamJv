@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.utilisateur.ReclamationBackController">
+   <children>
+      <TableView fx:id="TableViewBackReclamation" layoutX="45.0" layoutY="182.0" prefHeight="200.0" prefWidth="543.0" styleClass="border" stylesheets="@../../../../Values/style.css">
+        <columns>
+          <TableColumn fx:id="Type_back_col" prefWidth="118.0" text="Type" />
+          <TableColumn fx:id="date_back_col" prefWidth="136.0" text="Date" />
+            <TableColumn fx:id="etat_back_col" minWidth="0.0" prefWidth="76.0" text="Etat" />
+            <TableColumn fx:id="desc_back_col" prefWidth="210.0" text="Description" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/bankiz.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -32,8 +32,9 @@ public class MainClass {
         /*UtilisateurCRUD pcd = new UtilisateurCRUD();
         pcd.supprimerUtilisateur(45);*/
 //afficher tri utilisateurs par nom
-        /*UtilisateurCRUD pcd = new UtilisateurCRUD();
-        System.out.println(pcd.triUtilisateurParNom());*/
+       /* UtilisateurCRUD pcd = new UtilisateurCRUD();
+        System.out.println(pcd.findByID(84));*/
+        //System.out.println(pcd.triUtilisateurParNom());*/
 //login
        /* UtilisateurCRUD pcd = new UtilisateurCRUD();
         pcd.login("yoser.walha@esprit.tn","yoseryoser");*/
@@ -69,7 +70,7 @@ public class MainClass {
         System.out.println(pcd.nbAdmins());*/
 //afficher mes  reclamarions
         /*ReclamationCRUD pcd = new ReclamationCRUD();
-        System.out.println(pcd.afficherMesReclamations(44));*/
+        System.out.println(pcd.afficherMesReclamations(84));*/
 //calcul age
         /*UtilisateurCRUD pcd = new UtilisateurCRUD();
         int age = pcd.calculateAge(new Date(1999,07,05));
@@ -78,9 +79,9 @@ public class MainClass {
 //findByPrenom
         /*UtilisateurCRUD pcd = new UtilisateurCRUD();
         pcd.findByPrenom("oo");*/
-        UtilisateurCRUD pcd = new UtilisateurCRUD();
+        //UtilisateurCRUD pcd = new UtilisateurCRUD();
         //pcd.findByMail("yoser.walha@esprit.tn");
-        pcd.verifierEmailBd("yoser.walha@esprit.tn");
+        //pcd.verifierEmailBd("yoser.walha@esprit.tn");
         //-------------------------------------- PARTIE COMPTE ---------------------------------------------------
                 //CompteController comptCont = new CompteController();
 

@@ -30,6 +30,10 @@ public class LoginController {
     @javafx.fxml.FXML
     private TextField email_login;
 
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
     UtilisateurCRUD pcd = new UtilisateurCRUD();
     @javafx.fxml.FXML
     private Button mdp_oubliee;
@@ -45,10 +49,10 @@ public class LoginController {
 
                 System.out.println( Session.getEtat());
 
-                    switch (u.getRole()){
-                        case "ROLE_USER":
-                            try {
-                                if(Session.getEtat().equals("Debloquer")){
+                switch (u.getRole()){
+                    case "ROLE_USER":
+                        try {
+                            if(Session.getEtat().equals("Debloquer")){
                                 FXMLLoader loader = new FXMLLoader(getClass().getResource("Utilisateur.fxml"));///charger les element de fxml
                                 Parent root = loader.load();
                                 Stage stage =new Stage();
@@ -56,29 +60,29 @@ public class LoginController {
                                 stage.setTitle("Dashbord User");
                                 stage.setScene(scene);
                                 stage.show();}
-                                else{
-                                    JOptionPane.showMessageDialog(null, "bloquer", "Error", JOptionPane.ERROR_MESSAGE);
-                                }
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                            else{
+                                JOptionPane.showMessageDialog(null, "bloquer", "Error", JOptionPane.ERROR_MESSAGE);
                             }
-                            break;
-                        case "ROLE_ADMIN" :
-                            try {
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("Admin.fxml"));///charger les element de fxml
-                                Parent root = loader.load();
-                                Stage stage =new Stage();
-                                Scene scene = new Scene(root);
-                                stage.setTitle("Dashbord ADMIN");
-                                stage.setScene(scene);
-                                stage.show();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                            break;
-                        default:
-                            break;
-                    }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case "ROLE_ADMIN" :
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("Admin.fxml"));///charger les element de fxml
+                            Parent root = loader.load();
+                            Stage stage =new Stage();
+                            Scene scene = new Scene(root);
+                            stage.setTitle("Dashbord ADMIN");
+                            stage.setScene(scene);
+                            stage.show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    default:
+                        break;
+                }
 
 
 

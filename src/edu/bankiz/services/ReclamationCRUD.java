@@ -101,24 +101,26 @@ public class ReclamationCRUD {
         }
     }
 
-    public Reclamation afficherMesReclamations(int id) {
-        Reclamation r = new Reclamation();
+    public List<Reclamation> afficherMesReclamations(int id) {
+        List<Reclamation> myListReclamation = new ArrayList<>();
         try {
-            String requete = "SELECT * from reclamation INNER JOIN utilisateur ON (reclamation.nom_u_id = utilisateur.id) where nom_u_id=" + id + "";
+            String requete = "SELECT * from reclamation INNER JOIN utilisateur ON (reclamation.nom_u_id = utilisateur.id) where nom_u_id=" + id;
             Statement st = MyConnection.getInstance().getCnx().createStatement();
             ResultSet rs = st.executeQuery(requete);
-            if (rs.next()) {
+            while (rs.next()) {
+                Reclamation r = new Reclamation();
                 r.setId(rs.getInt(1));
                 r.setNom_u_id(rs.getInt("nom_u_id"));
                 r.setType_rec(rs.getString("type_rec"));
                 r.setDate_rec(rs.getString("date_rec"));
                 r.setEtat_rec(rs.getString("etat_rec"));
                 r.setDesc_rec(rs.getString("desc_rec"));
+                myListReclamation.add(r);
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-        return r;
+        return myListReclamation;
     }
 
 }

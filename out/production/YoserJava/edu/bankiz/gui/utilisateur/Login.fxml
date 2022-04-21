@@ -19,30 +19,10 @@
          </font></Button>
       <VBox alignment="TOP_CENTER" prefHeight="680.0" prefWidth="511.0" style="-fx-background-color: #B0C4DE;" styleClass="left-side_background" stylesheets="@../../../../Values/style.css">
          <children>
-            <ImageView fitHeight="108.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+            <Pane prefHeight="248.0" prefWidth="511.0" />
+            <ImageView fitHeight="243.0" fitWidth="337.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../img/bankiz.png" />
-               </image>
-            </ImageView>
-            <Pane prefHeight="76.0" prefWidth="511.0" />
-            <ImageView fitHeight="65.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" styleClass="left-side_background">
-               <image>
-                  <Image url="@../../../../img/cle.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="86.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/cle.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="116.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/cle.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/cle.png" />
                </image>
             </ImageView>
          </children>
