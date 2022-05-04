@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.workshopjdbc3a48.gui.AfficherOperationController">
+   <children>
+      <TableView fx:id="table_stade" layoutX="160.0" layoutY="23.0" prefHeight="425.0" prefWidth="791.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="col_dateop" prefWidth="75.0" text="date_op" />
+            <TableColumn fx:id="col_montpayer" prefWidth="93.0" text="mont_payer" />
+            <TableColumn fx:id="col_echance" prefWidth="86.0" text="echeance" />
+            <TableColumn fx:id="col_tauxinteret" prefWidth="103.0" text="taux_interet" />
+            <TableColumn fx:id="col_solvabilite" prefWidth="96.0" text="solvabilite" />
+            <TableColumn fx:id="col_typeoperation" prefWidth="125.0" text="type_operation" />
+            <TableColumn fx:id="col_creditid" prefWidth="137.0" text="Credit_id" />
+        </columns>
+      </TableView>
+      <Button fx:id="btsuprimer" layoutX="360.0" layoutY="465.0" mnemonicParsing="false" onAction="#suprimerop" prefHeight="37.0" prefWidth="82.0" text="suprimer" textFill="#eb3f18" />
+      <Button fx:id="Bupdate" layoutX="248.0" layoutY="465.0" mnemonicParsing="false" onAction="#updateoperation" prefHeight="37.0" prefWidth="82.0" text="modifier" textFill="#2eb9b2">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="btajout" layoutX="474.0" layoutY="465.0" mnemonicParsing="false" onAction="#ajouteropp" prefHeight="37.0" prefWidth="82.0" text="ajouter" textFill="#38dd41" />
+   </children>
+</AnchorPane>

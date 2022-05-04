@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.workshopjdbc3a48.gui.AffichercreditfrontController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="5.0" layoutY="5.0" prefHeight="584.0" prefWidth="1195.0">
+         <children>
+            <TableView fx:id="table_stade" layoutX="35.0" layoutY="118.0" prefHeight="371.0" prefWidth="1108.0">
+               <columns>
+                  <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+                  <TableColumn fx:id="col_montcredit" prefWidth="75.0" text="Montant crédit" />
+                  <TableColumn fx:id="col_datepe" prefWidth="189.0" text="Date première échéance" />
+                  <TableColumn fx:id="col_datede" minWidth="0.0" prefWidth="210.0" text="Date dernière échéance" />
+                  <TableColumn fx:id="col_dureec" minWidth="0.0" prefWidth="69.0" text="Duréé " />
+                  <TableColumn fx:id="col_echeance" minWidth="0.0" prefWidth="95.0" text="Echéance" />
+                  <TableColumn fx:id="col_tauxint" minWidth="0.0" prefWidth="95.0" text="Taux d'interet" />
+                  <TableColumn fx:id="col_decision" minWidth="0.0" prefWidth="74.0" text="Décision" />
+                  <TableColumn fx:id="col_etatc" minWidth="0.0" prefWidth="74.0" text="Etat crédit" />
+                  <TableColumn fx:id="col_typec" minWidth="0.0" prefWidth="74.0" text="Type crédit" />
+                  <TableColumn fx:id="col_numeroC" minWidth="0.0" prefWidth="74.0" text="numero de compte" />
+               </columns>
+            </TableView>
+            <Text fill="#3bddcb" layoutX="388.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des  Credit">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Text>
+            <Button fx:id="btdemande" layoutX="473.0" layoutY="499.0" mnemonicParsing="false" onAction="#deman" prefHeight="43.0" prefWidth="100.0" text="demande" textFill="#24c32c" />
+            <Button fx:id="btsim" layoutX="598.0" layoutY="499.0" mnemonicParsing="false" onAction="#simm" prefHeight="43.0" prefWidth="100.0" text="simuler" textFill="#3c36d6" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
