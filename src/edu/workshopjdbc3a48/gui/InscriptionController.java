@@ -1,0 +1,185 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ */
+package edu.workshopjdbc3a48.gui;
+
+import edu.workshopjdbc3a48.entities.Credit;
+import edu.workshopjdbc3a48.services.ServiceCredit;
+import java.io.IOException;
+import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+
+/**
+ * FXML Controller class
+ *
+ * @author user
+ */
+public class InscriptionController implements Initializable {
+
+    @FXML
+    private TextField tfmontcredit;
+    @FXML
+    private TextField tfdureecredit;
+    @FXML
+    private TextField tftypecredit;
+    @FXML
+    private Button btvaliderr;
+    @FXML
+    private DatePicker DPdatepe;
+    @FXML
+    private DatePicker DPdatede;
+    @FXML
+    private DatePicker DPecheance;
+    @FXML
+    private CheckBox CBdecision;
+    @FXML
+    private TextField tftauxInteret;
+    @FXML
+    private TextField tfetatCredit;
+    @FXML
+    private TextField tfnumero_compte;
+    
+    
+    
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+  @FXML//savecreditt
+    void savecreditt(ActionEvent event) {
+        
+        
+        
+        int montcredit = Integer.parseInt(tfmontcredit.getText());
+        
+        
+        /////////////datepe////////////////////////
+        
+        //LocalDate ld = DPdatepe.getValue();
+//Calendar c =  Calendar.getInstance();
+//c.set(ld.getYear(), ld.getMonthValue(), ld.getDayOfMonth());
+//Date datepe = c.getTime(); 
+//DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");  
+//String strDate = dateFormat.format(datepe); 
+
+//java.sql.Date sqldatepe = java.sql.Date.valueOf(strDate);
+
+
+
+java.sql.Date sqldatepe= java.sql.Date.valueOf(DPdatepe.getValue());
+  
+
+
+///////////////////////datede////////////////////////
+
+//LocalDate ld1 = DPdatede.getValue();
+//Calendar c1 =  Calendar.getInstance();
+//c1.set(ld1.getYear(), ld1.getMonthValue(), ld1.getDayOfMonth());
+//Date datede = c.getTime();
+//DateFormat dateFormat1 = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");  
+//String strDate1 = dateFormat1.format(datede); 
+
+//java.sql.Date sqldatede = java.sql.Date.valueOf(strDate1);
+
+java.sql.Date sqldatede= java.sql.Date.valueOf(DPdatede.getValue());
+/////////////////////////////////////////
+
+        
+          int dureecredit = Integer.parseInt(tfdureecredit.getText());
+        
+        
+        
+        
+        
+      //////////////////////echeance//////////////////////////////////  
+        //LocalDate ld2 = DPecheance.getValue();
+//Calendar c2 =  Calendar.getInstance();
+//c2.set(ld2.getYear(), ld2.getMonthValue(), ld2.getDayOfMonth());
+//Date echeance = c.getTime();
+//DateFormat dateFormat2 = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");  
+//String strDate2 = dateFormat1.format(echeance); 
+
+//java.sql.Date sqlecheance = java.sql.Date.valueOf(strDate2);
+java.sql.Date sqlecheance= java.sql.Date.valueOf(DPecheance.getValue());
+
+
+
+
+
+int tauxInteret = Integer.parseInt(tftauxInteret.getText());
+
+//.............................................................decision.............................
+
+     boolean decision = CBdecision.isSelected();
+
+if(decision){
+   CBdecision.setSelected(false);
+} else {
+   CBdecision.setSelected(true);
+}
+/////////..............tfetatCredit..................................
+
+
+
+String typecredit = tftypecredit.getText();
+String etatCredit = tfetatCredit.getText();
+int compte = Integer.parseInt(tfnumero_compte.getText());
+if (dureecredit<1) {
+    Alert alert1 = new Alert(Alert.AlertType.INFORMATION);//before(date2)
+    alert1.setTitle("Information");
+    alert1.setHeaderText(null);
+    alert1.setContentText("mont credit invalide");
+    
+    alert1.showAndWait();
+        } else if (dureecredit >5) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setHeaderText(null);
+            alert.setContentText("la duree credit doit etre inferieure a 5");
+            
+            alert.showAndWait();
+        }
+        else {
+            
+            ServiceCredit sc1=new ServiceCredit();
+            Credit hama =new Credit(montcredit,sqldatepe,sqldatede,dureecredit,sqlecheance,tauxInteret,decision,etatCredit,typecredit,compte);
+            sc1.ajouter2(hama);
+            Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+            a.setTitle("Credit ajoutée");
+            a.show();
+            sc1.ajouter2(hama);
+                          try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/workshopjdbc3a48/gui/afficherCredit.fxml"));
+            Parent root = loader.load();
+            CBdecision.getScene().setRoot(root);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        }
+
+
+        
+    }
+    
+}

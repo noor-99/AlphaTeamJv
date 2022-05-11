@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" blendMode="DARKEN" prefHeight="613.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.workshopjdbc3a48.gui.StateController">
+   <children>
+      <LineChart fx:id="lineChart" prefHeight="613.0" prefWidth="948.0" style="-fx-background-color: linear-gradient(#fbb112, #0d2de4),        radial-gradient(center 50% -40%, radius 200%, #fbb112 45%, #0d2de4 50%);;" title="solvabilité Credit">
+        <xAxis>
+          <CategoryAxis label="Credit" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Solvabilité" side="LEFT" tickLabelFill="#0d0d0d" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="btcredit" layoutX="424.0" layoutY="37.0" mnemonicParsing="false" onAction="#rcredit" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #0d2de4;" text="Credit" textFill="#272628" />
+   </children>
+</AnchorPane>

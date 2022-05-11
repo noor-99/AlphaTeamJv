@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="961.0" style="-fx-background-color: linear-gradient(#fbb112, #0d2de4),        radial-gradient(center 50% -40%, radius 200%, #fbb112 45%, #0d2de4 50%);;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.workshopjdbc3a48.gui.AjoutoperationfrontController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="961.0">
+         <children>
+            <ComboBox fx:id="listetypeoperation" layoutX="133.0" layoutY="169.0" onAction="#slecte" prefHeight="31.0" prefWidth="357.0" />
+            <TextField fx:id="tfmontpayer" layoutX="133.0" layoutY="85.0" prefHeight="31.0" prefWidth="357.0" />
+            <TextField fx:id="tfcreditid" layoutX="133.0" layoutY="215.0" prefHeight="31.0" prefWidth="357.0" />
+            <DatePicker fx:id="dpecheance" layoutX="133.0" layoutY="126.0" prefHeight="31.0" prefWidth="357.0" />
+            <Label layoutX="37.0" layoutY="90.0" text="mont_Payer" />
+            <Label layoutX="45.0" layoutY="131.0" text="echeance" />
+            <Label layoutX="25.0" layoutY="174.0" text="type_Operation" />
+            <Label layoutX="48.0" layoutY="220.0" text="credit_id" />
+            <Text fill="#e82424" layoutX="171.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operation Credit">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="imgcredit" fitHeight="258.0" fitWidth="200.0" layoutX="589.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imageCredit/imagecredi.jpeg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btvaliderop" layoutX="195.0" layoutY="281.0" mnemonicParsing="false" onAction="#saveop" prefHeight="77.0" prefWidth="218.0" style="-fx-background-color: #ffa60c;" text="valider" textFill="#3f3e3c" />
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="10.0" layoutY="14.0" onMouseClicked="#marii" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imageCredit/retoure2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

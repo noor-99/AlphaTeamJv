@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="1132.0" style="-fx-background-color: linear-gradient(#fbb112, #0d2de4),        radial-gradient(center 50% -40%, radius 200%, #fbb112 45%, #0d2de4 50%);;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.workshopjdbc3a48.gui.AjoutcreditfrontController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1109.0">
+         <children>
+            <Label layoutX="16.0" layoutY="129.0" text="mont Credit">
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#5f56e3" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="12.0" layoutY="198.0" text="duree Credit" textFill="#537ec2" />
+            <Label layoutX="16.0" layoutY="272.0" text="type Credit" textFill="#191a1b" />
+            <TextField fx:id="tfmontcredit" layoutX="140.0" layoutY="115.0" prefHeight="48.0" prefWidth="395.0" promptText="0" />
+            <TextField fx:id="tfdureecredit" layoutX="140.0" layoutY="184.0" prefHeight="48.0" prefWidth="395.0" />
+            <TextField fx:id="tftypecredit" layoutX="140.0" layoutY="258.0" prefHeight="48.0" prefWidth="395.0" />
+            <TextField fx:id="tfnumero_compte" layoutX="140.0" layoutY="328.0" prefHeight="48.0" prefWidth="395.0" />
+            <Label layoutX="16.0" layoutY="342.0" text="numero_compte" textFill="#2b2b2c" />
+            <ImageView fx:id="imagebank" fitHeight="299.0" fitWidth="480.0" layoutX="645.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imageCredit/imagecredi.jpeg" />
+               </image>
+            </ImageView>
+            <Text fill="#3e9487" layoutX="187.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Demande Credit">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btcredit" layoutX="298.0" layoutY="438.0" mnemonicParsing="false" onAction="#retour" prefHeight="60.0" prefWidth="131.0" text="Credit" />
+      <Button fx:id="btvalider" layoutX="458.0" layoutY="438.0" mnemonicParsing="false" onAction="#savecredit" prefHeight="60.0" prefWidth="131.0" text="valider" textFill="#449e40" />
+   </children>
+</AnchorPane>

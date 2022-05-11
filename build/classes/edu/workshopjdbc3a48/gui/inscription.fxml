@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="561.0" prefWidth="925.0" style="-fx-background-color: linear-gradient(#fbb112, #0d2de4),        radial-gradient(center 50% -40%, radius 200%, #fbb112 45%, #0d2de4 50%);;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.workshopjdbc3a48.gui.InscriptionController">
+   <children>
+      <Label layoutX="12.0" layoutY="19.0" text="mont Credit">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#5f56e3" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label layoutY="154.0" text="duree Credit" textFill="#537ec2" />
+      <Label layoutX="18.0" layoutY="322.0" text="type Credit" textFill="#537ec2" />
+      <TextField fx:id="tfmontcredit" layoutX="105.0" layoutY="14.0" prefHeight="31.0" prefWidth="355.0" style="-fx-background-color: white;" />
+      <TextField fx:id="tfdureecredit" layoutX="105.0" layoutY="149.0" prefHeight="31.0" prefWidth="355.0" />
+      <TextField fx:id="tftypecredit" layoutX="105.0" layoutY="317.0" prefHeight="31.0" prefWidth="355.0" />
+      <Button fx:id="btvaliderr" layoutX="341.0" layoutY="448.0" mnemonicParsing="false" onAction="#savecreditt" prefHeight="45.0" prefWidth="281.0" style="-fx-background-color: linear-gradient(#fbb112, #DAA520),        radial-gradient(center 50% -40%, radius 200%, #fbb112 45%, #DAA520 50%);; -fx-background-radius: 6, 5; -fx-background-insets: 0, 1; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );" text="valider" />
+      <DatePicker fx:id="DPdatepe" layoutX="105.0" layoutY="61.0" prefHeight="31.0" prefWidth="355.0" />
+      <DatePicker fx:id="DPdatede" layoutX="105.0" layoutY="102.0" prefHeight="31.0" prefWidth="355.0" />
+      <DatePicker fx:id="DPecheance" layoutX="105.0" layoutY="192.0" prefHeight="31.0" prefWidth="355.0" />
+      <Label layoutX="14.0" layoutY="66.0" text="date pe" textFill="#45a3da" />
+      <Label layoutX="14.0" layoutY="107.0" text="date de" textFill="#537ec2" />
+      <Label layoutX="14.0" layoutY="197.0" text="DPecheance" textFill="#537ec2" />
+      <CheckBox fx:id="CBdecision" layoutX="40.0" layoutY="278.0" mnemonicParsing="false" text="decision" textFill="#537ec2" />
+      <TextField fx:id="tftauxInteret" layoutX="105.0" layoutY="235.0" prefHeight="31.0" prefWidth="355.0" />
+      <Label layoutX="16.0" layoutY="240.0" text="tauxInteret" textFill="#537ec2" />
+      <Label layoutX="22.0" layoutY="363.0" text="etatCredit" textFill="#537ec2" />
+      <TextField fx:id="tfetatCredit" layoutX="105.0" layoutY="358.0" prefHeight="31.0" prefWidth="355.0" />
+      <TextField fx:id="tfnumero_compte" layoutX="284.0" layoutY="273.0" />
+      <Label layoutX="160.0" layoutY="278.0" text="numero_compte" textFill="#537ec2" />
+      <ImageView fitHeight="410.0" fitWidth="406.0" layoutX="505.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imageCredit/imagecredi.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="622.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
