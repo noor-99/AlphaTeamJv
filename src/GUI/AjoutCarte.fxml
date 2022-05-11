@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="811.0" prefWidth="1159.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutCarteController">
+   <children>
+      <Label layoutX="25.0" layoutY="144.0" prefHeight="17.0" prefWidth="60.0" text="id" />
+      <TextField fx:id="idclient" layoutX="128.0" layoutY="174.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="25.0" layoutY="209.0" prefHeight="17.0" prefWidth="60.0" text="Date_ex" />
+      <Label layoutX="25.0" layoutY="245.0" prefHeight="17.0" prefWidth="60.0" text="mp" />
+      <TextField fx:id="mp" layoutX="128.0" layoutY="241.0" />
+      <Label layoutX="25.0" layoutY="276.0" prefHeight="17.0" prefWidth="60.0" text="Login" />
+      <Label layoutX="25.0" layoutY="310.0" prefHeight="17.0" prefWidth="60.0" text="Num_Carte" />
+      <TextField fx:id="login" layoutX="128.0" layoutY="272.0" />
+      <TextField fx:id="num_carte" layoutX="129.0" layoutY="306.0" />
+      <TableView fx:id="table_stade" layoutX="353.0" layoutY="266.0" onMouseClicked="#getSelected" prefHeight="361.0" prefWidth="425.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="184.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="39.20001220703125" text="ID" visible="false" />
+            <TableColumn fx:id="col_id" prefWidth="54.0" text="id" />
+            <TableColumn fx:id="col_idclient" prefWidth="93.0" text="idClient" />
+            <TableColumn fx:id="col_date" prefWidth="79.0" text="Date" />
+            <TableColumn fx:id="col_mp" prefWidth="66.0" text="mp" />
+            <TableColumn fx:id="col_login" prefWidth="71.0" text="login" />
+            <TableColumn fx:id="col_num" minWidth="0.0" prefWidth="96.0" text="Num_C" />
+         </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#AjouterCarte" prefHeight="25.0" prefWidth="122.0" text="Ajouter" textFill="#00b23b" />
+      <TextField fx:id="fid" disable="true" layoutX="114.0" layoutY="25.0" visible="false" />
+      <TextField fx:id="id" layoutX="128.0" layoutY="140.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="25.0" layoutY="178.0" prefHeight="17.0" prefWidth="60.0" text="idclient" />
+      <Button layoutX="85.0" layoutY="404.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="122.0" text="supprimer" textFill="#eb0c0c" />
+      <Button layoutX="156.0" layoutY="361.0" mnemonicParsing="false" onAction="#Edit" prefHeight="25.0" prefWidth="122.0" text="modifier" textFill="#0f2cbc" />
+      <Button fx:id="btncategorie" layoutX="85.0" layoutY="438.0" mnemonicParsing="false" onAction="#getCategoriesView" prefHeight="25.0" prefWidth="122.0" text="Categorie" textFill="#4c5418" />
+      <Label layoutX="235.0" layoutY="22.0" prefHeight="56.0" prefWidth="370.0" text="Gestion des Cartes" textAlignment="CENTER">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <TextField fx:id="date" layoutX="127.0" layoutY="218.0" />
+   </children>
+</AnchorPane>
