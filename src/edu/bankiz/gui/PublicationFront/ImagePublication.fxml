@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="420.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.PublicationFront.ImagePublicationController">
+    <children>
+            <ImageView fx:id="image" fitHeight="211.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label fx:id="title" layoutX="14.0" layoutY="211.0" text="title" textFill="#151cd7">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font></Label>
+            <Label fx:id="category" layoutX="14.0" layoutY="249.0" text="category" textFill="#151cd7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+            <Button fx:id="modifBtn" layoutX="4.0" layoutY="291.0" mnemonicParsing="false" onMouseClicked="#modifierPublication" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #f6c23e;" text="Modifier" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+            <Button fx:id="deleteBtn" layoutX="5.0" layoutY="291.0" mnemonicParsing="false" onAction="#supprimerPublication" onMouseClicked="#supprimerPublication" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #f6c23e;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnCommentaire" layoutX="121.0" layoutY="291.0" mnemonicParsing="false" onAction="#listeCommentaire" style="-fx-background-color: #f6c23e;" text="Les Commentaires" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLike" layoutX="55.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#clickLike" prefHeight="31.0" prefWidth="57.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Images/like.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="numberOfLikes" layoutX="144.0" layoutY="351.0" />
+        </children>
+</AnchorPane>

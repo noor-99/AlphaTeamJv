@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="671.0" prefWidth="1203.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.PublicationBack.PublicationBackController">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #032a5f;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane layoutX="-7.0" layoutY="14.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #F0F8FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fitHeight="80.0" fitWidth="180.0" layoutX="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../Images/logo-Final.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <Button fx:id="btnUtilisateursBack" layoutX="24.0" layoutY="156.0" mnemonicParsing="false" onAction="#versUtilisateursBack" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: transparent;" text="Utilisateurs" textFill="WHITE" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="156.0">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Button>
+                <Button fx:id="btnReclamationsBack" layoutX="29.0" layoutY="198.0" mnemonicParsing="false" onAction="#versReclamationsBack" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: transparent;" text="Reclamations" textFill="WHITE" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="198.0">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Button>
+                <Button fx:id="pubBack" layoutX="-2.0" layoutY="248.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" style="-fx-background-color: #f6c23e;" text="Publications" textFill="WHITE" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="248.0">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font></Button>
+                <Button fx:id="btnCommntaireBack" layoutX="31.0" layoutY="298.0" mnemonicParsing="false" onAction="#versCommentaireBack" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: transparent;" text="Commentaires" textFill="WHITE" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="298.0">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Button>
+                <Separator layoutY="79.0" prefWidth="200.0" />
+                <Button fx:id="ComptesBack" layoutX="40.0" layoutY="345.0" mnemonicParsing="false" onAction="#versComptesBack" prefHeight="36.0" prefWidth="95.0" style="-fx-background-color: transparent;" text="Comptes" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Button>
+                <Button fx:id="TransactionsBack" layoutX="41.0" layoutY="394.0" mnemonicParsing="false" onAction="#versTransactionsBack" prefHeight="36.0" prefWidth="119.0" style="-fx-background-color: transparent;" text="Transactions" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Button>
+                <Button fx:id="btnChequesBack" layoutX="30.0" layoutY="440.0" mnemonicParsing="false" onAction="#versChequesBack" prefHeight="36.0" prefWidth="119.0" style="-fx-background-color: transparent;" text="Chèques" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnChequiersBack" layoutX="17.0" layoutY="488.0" mnemonicParsing="false" onAction="#versChequiersBack" prefHeight="36.0" prefWidth="160.0" style="-fx-background-color: transparent;" text="Chèquiers" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnCreditsBack" layoutX="28.0" layoutY="531.0" mnemonicParsing="false" onAction="#versCreditsBack" prefHeight="36.0" prefWidth="119.0" style="-fx-background-color: transparent;" text="Crédits" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnCartesBack" layoutX="42.0" layoutY="576.0" mnemonicParsing="false" onAction="#versCartesBack" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: transparent;" text="Cartes" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="23.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/cartes.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="23.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/profile.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="23.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/profile.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="15.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/forum.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="23.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/forum.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="19.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/piggy_bank.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="23.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/coins.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="23.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/cheques.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="23.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/cheques.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="23.0" layoutY="539.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/contract.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnLogoutBack" layoutX="135.0" layoutY="613.0" mnemonicParsing="false" onAction="#versLogoutBack" prefHeight="43.0" prefWidth="14.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../Images/logout.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="btnAccueilBack" layoutX="-3.0" layoutY="113.0" mnemonicParsing="false" onAction="#versAccueilBack" prefHeight="43.0" prefWidth="207.0" style="-fx-background-color: #032a5f;" text="Acceuil" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Button>
+                <ImageView fitHeight="20.0" fitWidth="29.0" layoutX="23.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/home.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="contenuBack" layoutX="200.0" layoutY="80.0" prefHeight="593.0" prefWidth="1004.0" style="-fx-background-color: #F0F8FF;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="-1.0">
+         <children>
+            <ComboBox fx:id="nomClientBack" layoutX="204.0" layoutY="96.0" prefHeight="26.0" prefWidth="263.0" style="-fx-background-color: #ffff;" />
+            <TextField fx:id="titreP" layoutX="204.0" layoutY="138.0" prefHeight="26.0" prefWidth="263.0" />
+            <TextArea fx:id="descP" layoutX="204.0" layoutY="196.0" prefHeight="66.0" prefWidth="263.0" />
+            <Label layoutX="19.0" layoutY="314.0" prefHeight="18.0" prefWidth="101.0" text="Categorie" />
+            <Label fx:id="pathPublication" layoutX="549.0" layoutY="100.0" prefHeight="18.0" prefWidth="101.0" text="Aucune image " />
+            <ComboBox fx:id="categP" layoutX="204.0" layoutY="307.0" prefHeight="26.0" prefWidth="263.0" style="-fx-background-color: #ffff;" />
+            <Label layoutX="18.0" layoutY="38.0" text="Recherche :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="25.0" layoutY="77.0" prefHeight="0.0" prefWidth="923.0" />
+            <ImageView fx:id="imageP" fitHeight="150.0" fitWidth="200.0" layoutX="635.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="BoutonImage" layoutX="702.0" layoutY="97.0" mnemonicParsing="false" onAction="#ajouterImageBack" style="-fx-background-color: #f6c23e;" text="Choisir une image">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tableauPublications" layoutX="56.0" layoutY="373.0" onMousePressed="#ajouterColonnesTextField" prefHeight="200.0" prefWidth="893.0">
+               <columns>
+                  <TableColumn fx:id="afficherNomClient" maxWidth="1503.9999389648438" minWidth="30.0" prefWidth="150.39999389648438" text="Nom Client" />
+                  <TableColumn fx:id="afficherTitre" maxWidth="1150.0001525878906" minWidth="30.0" prefWidth="115.00001525878906" text="Titre " />
+                  <TableColumn fx:id="afficherDescription" maxWidth="1518.0001831054688" minWidth="30.0" prefWidth="151.80001831054688" text="Description" />
+                  <TableColumn fx:id="afficherCategorie" maxWidth="1250.0" minWidth="30.0" prefWidth="125.0" text="Categorie" />
+                  <TableColumn fx:id="afficherDate" maxWidth="1694.000244140625" minWidth="30.0" prefWidth="169.4000244140625" text="Date" />
+                  <TableColumn fx:id="afficherImge" maxWidth="1816.0003662109375" minWidth="30.0" prefWidth="181.60003662109375" text="Image" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnStat" layoutX="876.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#versStat" style="-fx-background-color: #032a5f;" text="Statistiques" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="ajouterP" layoutX="886.0" layoutY="172.0" mnemonicParsing="false" onAction="#ajouterPublicationBack" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #032a5f;" text="Ajouter" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifierP" layoutX="880.0" layoutY="190.0" mnemonicParsing="false" onAction="#modifierPublicationBack" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #032a5f;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="supP" layoutX="880.0" layoutY="236.0" mnemonicParsing="false" onAction="#supprimerPublication" style="-fx-background-color: #032a5f;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="erreurDescriptionBack" layoutX="203.0" layoutY="278.0" prefHeight="18.0" prefWidth="263.0" text="* Veuillez saisir la description !!" textFill="#c42121" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreurTitreBack" layoutX="203.0" layoutY="172.0" prefHeight="18.0" prefWidth="263.0" text="* Veuillez saisir le titre !!" textFill="#cf1a1a" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchPub" layoutX="129.0" layoutY="36.0" prefHeight="26.0" prefWidth="350.0" />
+         </children></AnchorPane>
+        <Pane layoutX="200.0" prefHeight="80.0" prefWidth="1005.0" style="-fx-background-color: #032a5f;">
+            <children>
+                <Label layoutX="311.0" layoutY="7.0" text="Dashboard Bankiz" textFill="#f6c23e">
+                    <font>
+                        <Font name="System Bold" size="45.0" />
+                    </font>
+                </Label>
+            </children></Pane>
+      <Label fx:id="labelNomClientCompteBack" layoutX="216.0" layoutY="177.0" prefHeight="18.0" prefWidth="101.0" text="Nom Client " />
+      <Label fx:id="labelSoldeCompteBack" layoutX="215.0" layoutY="225.0" prefHeight="18.0" prefWidth="94.0" text="Titre de l'article" />
+      <Label fx:id="labelSeuilCompteBack" layoutX="215.0" layoutY="278.0" prefHeight="18.0" prefWidth="143.0" text="Description de l'article" />
+    </children>
+</AnchorPane>

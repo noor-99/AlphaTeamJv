@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="757.0" prefWidth="722.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.CartesCategories.AjoutCategorieController">
+    <stylesheets>
+        <URL value="@evenements.css" />
+     </stylesheets>
+   <children>
+      <Pane layoutX="39.0" layoutY="19.0" prefHeight="738.0" prefWidth="643.0" styleClass="cardContainer" stylesheets="@evenements.css">
+         <children>
+            <DatePicker fx:id="dateInput" layoutX="55.0" layoutY="222.0" prefHeight="45.0" prefWidth="205.0" promptText="Date de gategorie" />
+            <TextField fx:id="typeInput" layoutX="55.0" layoutY="42.0" prefHeight="45.0" prefWidth="536.0" promptText="type carte" styleClass="input" />
+            <TextArea fx:id="descriptionInput" layoutX="55.0" layoutY="366.0" prefHeight="164.0" prefWidth="536.0" promptText="Description" />
+            <Button fx:id="saveInput" layoutX="55.0" layoutY="622.0" mnemonicParsing="false" onAction="#saveData" prefHeight="45.0" prefWidth="536.0" styleClass="participerButton" text="Enregistrer" textFill="WHITE" />
+            <TextField fx:id="montantmax" layoutX="55.0" layoutY="296.0" prefHeight="45.0" prefWidth="536.0" promptText="Montant_Max" styleClass="input" />
+            <Button layoutX="440.0" layoutY="551.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="45.0" prefWidth="151.0" styleClass="participerButton" text="Attacher" textFill="WHITE" />
+            <TextField fx:id="imagePath" editable="false" layoutX="55.0" layoutY="551.0" prefHeight="45.0" prefWidth="373.0" promptText=" " styleClass="input" />
+            <JFXTimePicker fx:id="timepicker" defaultColor="#81523d" layoutX="282.0" layoutY="225.0" prefHeight="40.0" prefWidth="302.0" />
+            <TextField fx:id="prixInput" layoutX="55.0" layoutY="109.0" prefHeight="45.0" prefWidth="536.0" promptText="Prix" styleClass="input" />
+            <Button fx:id="btnretour" layoutX="55.0" layoutY="682.0" mnemonicParsing="false" onAction="#getCategoriesView" prefHeight="45.0" prefWidth="536.0" styleClass="participerButton" text="Retour" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets bottom="50.0" />
+         </padding>
+      </Pane>
+      <Label layoutX="276.0" layoutY="14.0" prefHeight="52.0" prefWidth="324.0" text="Ajouter un Categorie" textFill="#81523b">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" blendMode="DARKEN" prefHeight="613.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.CreditsOperations.StateController">
+   <children>
+      <LineChart fx:id="lineChart" prefHeight="590.0" prefWidth="1000.0" style="-fx-background-color:#F0F8FF;" title="solvabilité Credit">
+        <xAxis>
+          <CategoryAxis label="Credit" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Solvabilité" side="LEFT" tickLabelFill="#0d0d0d" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="btcredit" layoutX="424.0" layoutY="37.0" mnemonicParsing="false" onAction="#rcredit" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #032a5f;" text="Credit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

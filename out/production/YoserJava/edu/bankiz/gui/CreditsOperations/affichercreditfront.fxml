@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1000.0" style="-fx-background-color: #032a5f;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.CreditsOperations.AffichercreditfrontController">
+    <children>
+        <AnchorPane layoutX="54.0" layoutY="49.0" prefHeight="582.0" prefWidth="904.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 30; -fx-border-radius: 30;">
+         <children>
+              <TableView fx:id="table_stade" layoutX="59.0" layoutY="68.0" prefHeight="371.0" prefWidth="786.0">
+                  <columns>
+                      <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+                      <TableColumn fx:id="col_montcredit" prefWidth="75.0" text="Montant crédit" />
+                      <TableColumn fx:id="col_datepe" prefWidth="189.0" text="Date première échéance" />
+                      <TableColumn fx:id="col_datede" minWidth="0.0" prefWidth="210.0" text="Date dernière échéance" />
+                      <TableColumn fx:id="col_dureec" minWidth="0.0" prefWidth="69.0" text="Duréé " />
+                      <TableColumn fx:id="col_echeance" minWidth="0.0" prefWidth="95.0" text="Echéance" />
+                      <TableColumn fx:id="col_tauxint" minWidth="0.0" prefWidth="95.0" text="Taux d'interet" />
+                      <TableColumn fx:id="col_decision" minWidth="0.0" prefWidth="74.0" text="Décision" />
+                      <TableColumn fx:id="col_etatc" minWidth="0.0" prefWidth="74.0" text="Etat crédit" />
+                      <TableColumn fx:id="col_typec" minWidth="0.0" prefWidth="74.0" text="Type crédit" />
+                      <TableColumn fx:id="col_numeroC" minWidth="0.0" prefWidth="74.0" text="numero de compte" />
+                  </columns>
+              </TableView>
+              <Button fx:id="btdemande" layoutX="165.0" layoutY="464.0" mnemonicParsing="false" onAction="#deman" prefHeight="43.0" prefWidth="100.0" style="-fx-background-color: #fbb112;" text="demande" textFill="#24c32c" />
+              <Button fx:id="btsim" layoutX="281.0" layoutY="464.0" mnemonicParsing="false" onAction="#simm" prefHeight="43.0" prefWidth="100.0" style="-fx-background-color: #fbb112;" text="simuler" textFill="#3c36d6" />
+              <Button fx:id="btoperation" layoutX="50.0" layoutY="464.0" mnemonicParsing="false" onAction="#operationaff" prefHeight="43.0" prefWidth="100.0" style="-fx-background-color: #fbb112;" text="operation" />
+              <Button layoutX="398.0" layoutY="464.0" mnemonicParsing="false" onAction="#calculercreance" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #fbb112;" text="Créance" />
+              <Text fx:id="txtcreance" fill="#032a5f" layoutX="504.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des  Crédits" wrappingWidth="354.9677734375">
+                  <font>
+                      <Font name="System Bold" size="20.0" />
+                  </font>
+              </Text>
+         </children></AnchorPane>
+        <AnchorPane layoutX="-6.0" layoutY="49.0" prefHeight="54.0" prefWidth="103.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 20; -fx-border-radius: 20;">
+            <children>
+                <ImageView fitHeight="50.0" fitWidth="103.0" layoutX="10.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/logo-Final.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Button fx:id="btnAccueilFront" layoutX="-2.0" layoutY="132.0" mnemonicParsing="false" onAction="#versAccueil" prefHeight="31.0" prefWidth="59.0" style="-fx-background-color: transparent;">
+         <graphic>
+                <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/home.png" />
+                    </image>
+                </ImageView>
+         </graphic></Button>
+        <Button fx:id="btnCompteFront" layoutX="1.0" layoutY="185.0" mnemonicParsing="false" onAction="#redirectCompteFront" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/piggy_bank.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnTransFront" layoutX="3.0" layoutY="246.0" mnemonicParsing="false" onAction="#redirectTransactionsFront" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/coins.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnForumFront" layoutX="2.0" layoutY="374.0" mnemonicParsing="false" onAction="#redirectForumFront" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/forum.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnCreditFront" layoutY="434.0" mnemonicParsing="false" onAction="#redirectCreditFront" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #f6c23e;">
+            <graphic>
+                <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/contract.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnCartesFront" layoutX="1.0" layoutY="494.0" mnemonicParsing="false" onAction="#redirectCartesFront" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/cartes.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnChequesFront" layoutX="1.0" layoutY="311.0" mnemonicParsing="false" onAction="#redirectChequesFront" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/cheques.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnReclamationFront" layoutX="1.0" layoutY="551.0" mnemonicParsing="false" onAction="#redirectReclamationFront" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/reclamation.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnLogoutFront" layoutX="944.0" layoutY="631.0" mnemonicParsing="false" onAction="#redirectLogoutFront" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/logout.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label layoutX="224.0" text="~ Investissez, Adoptez, Bankizez ... ~" textFill="#f6c23e">
+            <font>
+                <Font name="System Bold" size="32.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnProfileFront" layoutX="938.0" layoutY="7.0" mnemonicParsing="false" onAction="#redirectProfileFront" onMouseEntered="#redirectPopUp" onMouseExited="#ciaoPopup" prefHeight="47.0" prefWidth="59.0" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/profile.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <!--   <Button fx:id="btnAccueil" layoutX="9.0" layoutY="13.0" mnemonicParsing="false" onAction="#versAccueil" style="-fx-background-color: transparent;">-->
+        <!--      <graphic>-->
+        <!--         <ImageView fitHeight="23.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">-->
+        <!--            <image>-->
+        <!--               <Image url="@../../../../Images/home.png" />-->
+        <!--            </image>-->
+        <!--         </ImageView>-->
+        <!--      </graphic>-->
+        <!--   </Button>-->
+    </children>
+</AnchorPane>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1000.0" style="-fx-background-color: #032a5f;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.Comptes.Front.MonCompteBancaireController">
+   <children>
+      <AnchorPane layoutX="54.0" layoutY="49.0" prefHeight="582.0" prefWidth="915.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 30; -fx-border-radius: 30;">
+         <children>
+            <Button layoutX="-54.0" layoutY="138.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #f6c23e;">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Images/piggy_bank.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane layoutX="36.0" layoutY="38.0" prefHeight="240.0" prefWidth="274.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="103.0" layoutX="82.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Images/wallet.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="soldeFront" alignment="CENTER" contentDisplay="RIGHT" layoutX="16.0" layoutY="120.0" prefHeight="34.0" prefWidth="157.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="178.0" layoutY="120.0" text="DT">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="154.0" text="Solde Actuel" textFill="#000000d1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnInformationCompte" alignment="CENTER" layoutX="157.0" layoutY="187.0" mnemonicParsing="false" onAction="#ChargerInformationsCompte" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #032a5f;" text="Informations" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="btnReleveFront" alignment="CENTER" layoutX="14.0" layoutY="187.0" mnemonicParsing="false" onAction="#GenererReleveCompteFront" prefHeight="32.0" prefWidth="127.0" style="-fx-background-color: #f6c23e;" text="Relevé de compte" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane layoutX="36.0" layoutY="286.0" prefHeight="240.0" prefWidth="274.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <ImageView fx:id="QrCode" fitHeight="195.0" fitWidth="218.0" layoutX="39.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="28.0" layoutY="188.0" prefHeight="47.0" prefWidth="218.0" text="Scannez ce code Qr pour faciliter les transactions" textAlignment="CENTER" textFill="#000000d1" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="318.0" layoutY="38.0" prefHeight="280.0" prefWidth="588.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <TableView fx:id="tableTransactionsFront" layoutX="12.0" layoutY="54.0" prefHeight="212.0" prefWidth="564.0">
+                    <columns>
+                      <TableColumn fx:id="tabDateTransFront" prefWidth="78.800048828125" text="Date" />
+                        <TableColumn fx:id="tabEmetteurFront" prefWidth="125.60003662109375" text="Emetteur" />
+                        <TableColumn fx:id="tabRecepteurFront" prefWidth="97.20001220703125" text="Récepteur" />
+                        <TableColumn fx:id="tabMontantFront" minWidth="0.0" prefWidth="85.60003662109375" text="Montant" />
+                      <TableColumn fx:id="tabDescriptionFront" prefWidth="101.79998779296875" text="Description" />
+                        <TableColumn fx:id="tabEtatTransFront" minWidth="0.0" prefWidth="71.20001220703125" text="Etat" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" text="Activité Récente " textFill="#000000d2">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+
+            <Button fx:id="btnDesactiverCompteFront" alignment="CENTER" layoutX="77.0" layoutY="536.0" mnemonicParsing="false" onAction="#DesactiverCompteFront" prefHeight="32.0" prefWidth="190.0" style="-fx-background-color: #f6c23e;" text="Désactiver mon compte" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="-6.0" layoutY="49.0" prefHeight="54.0" prefWidth="103.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="103.0" layoutX="10.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/logo-Final.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnAccueilFront" layoutX="-9.0" layoutY="132.0" mnemonicParsing="false" onAction="#RedirectAccueilFront" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnTransFront" layoutX="3.0" layoutY="246.0" mnemonicParsing="false" onAction="#redirectTransactionsFront" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/coins.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnForumFront" layoutX="2.0" layoutY="374.0" mnemonicParsing="false" onAction="#redirectForumFront" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/forum.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnCreditFront" layoutY="434.0" mnemonicParsing="false" onAction="#redirectCreditFront" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/contract.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnCartesFront" layoutX="1.0" layoutY="494.0" mnemonicParsing="false" onAction="#redirectCartesFront" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/cartes.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnChequesFront" layoutX="1.0" layoutY="311.0" mnemonicParsing="false" onAction="#redirectChequesFront" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/cheques.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnProfileFront" layoutX="1.0" layoutY="551.0" mnemonicParsing="false" onAction="#redirectProfileFront" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/reclamation.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnLogoutFront" layoutX="944.0" layoutY="631.0" mnemonicParsing="false" onAction="#redirectLogoutFront" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="224.0" text="~ Investissez, Adoptez, Bankizez ... ~" textFill="#f6c23e">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+<!--      <Label fx:id="labelTemps" layoutX="835.0" layoutY="3.0" prefHeight="46.0" prefWidth="150.0" textFill="WHITE">-->
+<!--         <font>-->
+<!--            <Font name="System Bold Italic" size="31.0" />-->
+<!--         </font>-->
+<!--      </Label>-->
+<!--      <Label fx:id="labelDateNow" layoutX="15.0" layoutY="14.0" prefHeight="25.0" prefWidth="102.0" textFill="WHITE">-->
+<!--         <font>-->
+<!--            <Font name="System Bold Italic" size="16.0" />-->
+<!--         </font>-->
+<!--      </Label>-->
+   </children>
+</AnchorPane>

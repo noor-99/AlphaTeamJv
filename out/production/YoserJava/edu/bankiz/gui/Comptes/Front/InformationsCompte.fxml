@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #032a5f;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bankiz.gui.Comptes.Front.InformationsCompteController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="374.0" prefWidth="322.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 30; -fx-border-radius: 30;">
+         <children>
+            <Label layoutX="46.0" layoutY="14.0" prefHeight="26.0" prefWidth="229.0" text="Détails sur votre compte" textFill="#000000d8">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="13.0" layoutY="51.0" prefHeight="0.0" prefWidth="299.0" />
+            <Separator layoutX="13.0" layoutY="324.0" prefHeight="0.0" prefWidth="299.0" />
+            <Label layoutX="65.0" layoutY="340.0" prefHeight="20.0" prefWidth="207.0" text="© Bankiz, All Rights Reserved." textFill="#000000a4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="77.0" prefHeight="20.0" prefWidth="56.0" text="RIB">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="104.0" prefHeight="18.0" prefWidth="128.0" text="Numéro Compte">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="137.0" prefHeight="18.0" prefWidth="56.0" text="Solde">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="167.0" prefHeight="20.0" prefWidth="114.0" text="Seuil Compte">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="197.0" prefHeight="18.0" prefWidth="98.0" text="Type Compte">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="230.0" prefHeight="18.0" prefWidth="113.0" text="Taux d'Intérêt">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="290.0" prefHeight="18.0" prefWidth="98.0" text="Date Création">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="259.0" prefHeight="20.0" prefWidth="128.0" text="Etat Compte">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCloseInfo" layoutX="276.0" layoutY="10.0" mnemonicParsing="false" onAction="#CloseInfo" prefHeight="33.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Images/close2.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="RibInfo" layoutX="133.0" layoutY="77.0" prefHeight="20.0" prefWidth="174.0" textAlignment="RIGHT" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="NumCompteInfo" layoutX="193.0" layoutY="104.0" prefHeight="20.0" prefWidth="114.0" textAlignment="RIGHT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="SoldeInfo" layoutX="193.0" layoutY="137.0" prefHeight="20.0" prefWidth="114.0" textAlignment="RIGHT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="SeuilInfo" layoutX="193.0" layoutY="167.0" prefHeight="20.0" prefWidth="114.0" textAlignment="RIGHT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="TypeCompteInfo" layoutX="193.0" layoutY="197.0" prefHeight="20.0" prefWidth="114.0" textAlignment="RIGHT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="TauxInteretInfo" layoutX="193.0" layoutY="230.0" prefHeight="20.0" prefWidth="114.0" textAlignment="RIGHT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateCompteInfo" layoutX="169.0" layoutY="290.0" prefHeight="20.0" prefWidth="128.0" textAlignment="RIGHT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="EtatCompteInfo" layoutX="193.0" layoutY="259.0" prefHeight="20.0" prefWidth="114.0" textAlignment="RIGHT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
