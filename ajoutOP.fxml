@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.workshopjdbc3a48.gui.AjoutOPController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="5.0" layoutY="5.0" prefHeight="532.0" prefWidth="1111.0">
+         <children>
+            <TableView fx:id="table_stade" layoutX="160.0" layoutY="79.0" prefHeight="382.0" prefWidth="791.0">
+               <columns>
+                  <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+                  <TableColumn fx:id="col_dateop" prefWidth="75.0" text="date_op" />
+                  <TableColumn fx:id="col_montpayer" prefWidth="93.0" text="mont_payer" />
+                  <TableColumn fx:id="col_echance" prefWidth="86.0" text="echeance" />
+                  <TableColumn fx:id="col_tauxinteret" prefWidth="103.0" text="taux_interet" />
+                  <TableColumn fx:id="col_solvabilite" prefWidth="96.0" text="solvabilite" />
+                  <TableColumn fx:id="col_typeoperation" prefWidth="125.0" text="type_operation" />
+                  <TableColumn fx:id="col_creditid" prefWidth="137.0" text="Credit_id" />
+               </columns>
+            </TableView>
+            <Button fx:id="btajout" layoutX="490.0" layoutY="469.0" mnemonicParsing="false" onAction="#ajouteropp" prefHeight="37.0" prefWidth="82.0" text="ajouter" textFill="#38dd41" />
+            <Text fill="#58c7cd" layoutX="483.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operation Credit">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="btc" layoutX="609.0" layoutY="472.0" mnemonicParsing="false" onAction="#gocredit" prefHeight="37.0" prefWidth="75.0" text="Credit" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
